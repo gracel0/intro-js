@@ -69,19 +69,45 @@ const H1 = document.getElementById('greeting');
 //     H1.innerHTML = result;
 // }
 
-const askColor = prompt('Pick one of the following colors: red, blue, or orange. Await the following response...');
+// const askColor = prompt('Pick one of the following colors: red, blue, or orange. Await the following response...');
 
-switch(askColor) {
-    case 'red':
-        H1.innerHTML = `You chose ${askColor}'.. which reminds me of that song, Lady In Read.. is dancing with me...`;
+// switch(askColor) {
+//     case 'red':
+//         H1.innerHTML = `You chose ${askColor}'.. which reminds me of that song, Lady In Read.. is dancing with me...`;
+//     break;
+//     case 'blue':
+//         H1.style.backgroundColor='#aaa';
+//         H1.innerHTML = `You chose ${askColor} I'm dee abbb daa blue adaa`;
+//     case 'orange':
+//         H1.innerHTML = `You chose ${askColor} - only thing that comes to mind is Halloweentown`;
+//     break;
+//     default:
+//         H1.innerHTML = `You did not follow the rules, fam`;
+//     break;
+// }
+
+/////////////////////////////////////////////////////////////////////
+
+const ask18 = prompt('Are you over 18? Type yes or no.');
+
+switch(ask18) {
+    case 'yes':
+        H1.innerHTML = `You typed ${ask18}, so you may proceed.`;
     break;
-    case 'blue':
-        H1.style.backgroundColor='#aaa';
-        H1.innerHTML = `You chose ${askColor} I'm dee abbb daa blue adaa`;
-    case 'orange':
-        H1.innerHTML = `You chose ${askColor} - only thing that comes to mind is Halloweentown`;
-    break;
-    default:
-        H1.innerHTML = `You did not follow the rules, fam`;
+    case 'no':
+        H1.innerHTML = `You are not old enough to proceed. Go home.`;
     break;
 }
+
+const ask80 = prompt(`Are you under 80? Type yes or no.`);
+    
+switch(ask80) {
+    case 'yes':
+        H1.innerHTML = `Do you like Star Wars?`;
+    break;
+    case 'no':
+        H1.innerHTML = `Do you like prunes?`;
+    break;
+}
+
+//switch(ask#) 
