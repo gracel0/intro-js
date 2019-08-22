@@ -88,26 +88,36 @@ const H1 = document.getElementById('greeting');
 
 /////////////////////////////////////////////////////////////////////
 
-const ask18 = prompt('Are you over 18? Type yes or no.');
+//const ask18 = confirm('Are you over 18?');
 
-switch(ask18) {
-    case 'yes':
-        H1.innerHTML = `You typed ${ask18}, so you may proceed.`;
-    break;
-    case 'no':
-        H1.innerHTML = `You are not old enough to proceed. Go home.`;
-    break;
+//if (ask18) = true
+
+if (ask18 === true) {
+    H1.innerHTML = 'You may proceed.';
+}
+ 
+else {
+    H1.innerHTML = 'Stop, go home.';
 }
 
-const ask80 = prompt(`Are you under 80? Type yes or no.`);
+// switch(ask18) {
+//     case 'yes':
+//         H1.innerHTML = `You typed ${ask18}, so you may proceed.`;
+//     break;
+//     case 'no':
+//         H1.innerHTML = `You are not old enough to proceed. Go home.`;
+//     break;
+// }
+
+// const ask80 = prompt(`Are you under 80? Type yes or no.`);
     
-switch(ask80) {
-    case 'yes':
-        H1.innerHTML = `Do you like Star Wars?`;
-    break;
-    case 'no':
-        H1.innerHTML = `Do you like prunes?`;
-    break;
+// switch(ask80) {
+//     case 'yes':
+//         H1.innerHTML = `Do you like Star Wars?`;
+//     break;
+//     case 'no':
+//         H1.innerHTML = `Do you like prunes?`;
+//     break;
 }
 
-//switch(ask#) 
+
