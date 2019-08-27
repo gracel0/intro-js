@@ -1,0 +1,10 @@
+# pack-refs with: peeled fully-peeled sorted 
+62cb2761c436403d46b47543d42067aef5f02c17 refs/heads/dayFour
+6ab5d94da209f0ba8583467599d70e1274c053e8 refs/heads/dayOne
+34a1488f8caf9b3dc21a419c554a3647b0adec76 refs/heads/dayThree
+7d56841233aa6bd52e68bdcb23284e063f77a245 refs/heads/dayTwo
+34392eeaacaedab383d7e067a0b3bdddf9359be4 refs/heads/gh-pages
+ab91b9052a72d00dc57b23dc0309539a429723f1 refs/heads/master
+b72f6c0c855964d7807415e82e3202e486ab9e37 refs/heads/takehome-day2
+21be7cddeb9a651cf1fc994a52079deccd382592 refs/heads/takehome-dayThree
+34392eeaacaedab383d7e067a0b3bdddf9359be4 refs/heads/takehome-dayTwo
