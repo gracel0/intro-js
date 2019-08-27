@@ -1,32 +1,32 @@
- function myFunk() {
-    let question = prompt('Tell me your name.');
-    console.log('Your name is ' + question);
- }
+//  function myFunk() {
+//     let question = prompt('Tell me your name.');
+//     console.log('Your name is ' + question);
+//  }
 
-console.log('I love my JS students');
-
-
-
-console.log('Food');
-
-console.log('Cinema');
-
-console.log('Travel');
-
-console.log('Music');
-
-alert('Yo, welcome!');
+// console.log('I love my JS students');
 
 
-//display in browser instead of console//
-function grabElementAndSpitOutValue() {
-    // get element from index //
-    const MAIN_DIV = document.getElementByID('mainDiv');
-    // write inside out in HTML //
-    MAIN_DIV.innerHTML = 'Hey, I am here.';
-    // execute //
-    console.log('This hit.');
-}
+
+// console.log('Food');
+
+// console.log('Cinema');
+
+// console.log('Travel');
+
+// console.log('Music');
+
+// alert('Yo, welcome!');
+
+
+// //display in browser instead of console//
+// function grabElementAndSpitOutValue() {
+//     // get element from index //
+//     const MAIN_DIV = document.getElementByID('mainDiv');
+//     // write inside out in HTML //
+//     MAIN_DIV.innerHTML = 'Hey, I am here.';
+//     // execute //
+//     console.log('This hit.');
+// }
 
 
 
@@ -138,3 +138,82 @@ function grabElementAndSpitOutValue() {
 //     console.log(person.firstName);
 // }
 
+
+// takehome-dayFour//////////////////////////////////
+
+// Jacque's version
+
+//create three variables of prompt values
+
+// const taskOne = prompt('Give me your first task to do?');
+// const taskTwo = prompt('Give me a second task you need to do?');
+// const taskThree = prompt('Give me the last task you need to do?');
+
+// let arrayOfTasks = [taskOne, taskTwo, taskThree];
+// let secondArrayofTasks = [
+//     [taskOne];
+//     [taskTwo];
+//     [taskThree];
+// ];
+
+// console.log(arrayOfTasks);
+// console.log('second one: ', secondArrayOfTasks);
+
+// const limit = 3;
+// for(j = 0; j < limit; j++) {
+//     console.log('j');
+//     arrayOfTasks[j].push(`this will take ${Math.floor(Math.random() * 15)}`);
+//     console.log(secondArrayofTasks[j]);
+// }
+
+
+//Michael O's version ////////
+
+let numberOfItems = 3;
+let toDoList = [];
+
+for(let i = 0; i < numberOfItems; i++)
+{
+    toDoList.push([prompt(`Enter todo Item# ${i+1}`)]); //enter todo items as arrays
+}
+
+for(let i = 0; i < toDoList.length; i++)
+{
+    toDoList[i].push((i+1)*2); //add amount of days item will take
+}
+
+let longestTaskName = toDoList[0][0]; //default to first name value in list
+let longestTaskDays = toDoList[0][1]; //default to first day(s) value in list
+let iterator = 0;
+
+while(iterator < toDoList.length)
+{
+    if(toDoList[iterator][1] > longestTaskDays)
+    {
+        longestTaskName = toDoList[iterator][0];
+        longestTaskDays = toDoList[iterator][1];
+    }
+    iterator++;
+}
+
+console.log(`The longest task will be: ${longestTaskName}, it will take: ${longestTaskDays} days.`);
+
+let j = 0;
+
+do
+{
+    if(longestTaskName != toDoList[j][0])
+    {
+        toDoList[j].push("easy-peasy");
+        alert(`${toDoList[j][0]}, is easy!`);
+    }
+    else
+    {
+        toDoList[j].push("difficult");
+    }
+
+    j++;
+
+} while(j < toDoList.length)
+
+console.log(toDoList);
