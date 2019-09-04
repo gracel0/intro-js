@@ -71,4 +71,54 @@ function poster () {
 }
 
 
+/////////////////////////////////////////////////////////////
+// Jacque's js from Slack for wireframe with hero
+const container = document.querySelector('.container');
+const button = document.createElement('button');
+button.id = "triggerMagic";
+button.className = "btn btn-primary btn-sm text-uppercase center_center";
+button.innerHTML = "click for some magic";
+container.appendChild(button);
+
+
+let triggered = () => {
+    button.addEventListener('click', () => {
+        poster();
+    });
+}
+
+function poster() {
+    //create a card parent div that will have: h1, img, p, icon>link
+    const panelDiv = document.createElement('div');
+    panelDiv.className = 'panel panel-default col-md-6 text-center';
+    const wrapper = document.createElement('div');
+    wrapper.className = 'col-md-4';
+    const h1 = document.createElement('h1');
+    h1.className = "panel-title";
+    const image = document.createElement('img');
+    image.className = 'img-responsive';
+    image.setAttribute('src', '../img/hero_2.jpeg');
+    image.setAttribute('alt', 'Groceries');
+    const p = document.createElement('p');
+    p.innerText = 'Grocery stores serve wonderful produce to the world of tomorrow.';
+    const anchor = document.createElement('a');
+    anchor.setAttribute('href', 'www.facebook.com');
+    anchor.setAttribute('role', 'btn');
+    const icon = document.createElement('i');
+    icon.className = 'fab fa-facebook';
+
+    wrapper.appendChild(h1);
+    wrapper.appendChild(image);
+    wrapper.appendChild(p);
+
+    anchor.appendChild(icon);
+    wrapper.appendChild(anchor);
+    panelDiv.appendChild(wrapper);
+    container.appendChild(panelDiv);
+
+
+}
+
+triggered();
+
 
